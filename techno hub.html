@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Techno Hub | Software House</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Header */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(rgba(15,23,42,.8), rgba(15,23,42,.9)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600') center/cover;
+}
+
+.hero-content{
+    width:100%;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.hero p{
+    max-width:700px;
+    margin:0 auto 30px;
+    color:#cbd5e1;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 32px;
+    background:#38bdf8;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:#0ea5e9;
+}
+
+/* Sections */
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#38bdf8;
+}
+
+/* About */
+.about{
+    text-align:center;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    color:#cbd5e1;
+}
+
+/* Services */
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#38bdf8;
+}
+
+/* Portfolio */
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project{
+    background:#1e293b;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.project img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:20px;
+}
+
+/* Contact */
+.contact{
+    text-align:center;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+}
+
+input, textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+}
+
+textarea{
+    resize:none;
+    height:140px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+}
+
+/* Footer */
+footer{
+    background:#020617;
+    text-align:center;
+    padding:25px;
+    color:#94a3b8;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero h1{
+        font-size:40px;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo">Techno Hub</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+<div class="container hero-content">
+<h1>Welcome to <span>Techno Hub</span></h1>
+<p>
+We build modern websites, mobile applications and custom software solutions
+that help businesses grow faster in the digital world.
+</p>
+
+<a href="#contact" class="btn">Get Free Consultation</a>
+</div>
+</section>
+
+<!-- About -->
+<section id="about">
+<div class="container about">
+<h2 class="section-title">About Us</h2>
+
+<p>
+Techno Hub is a professional software house providing innovative technology
+solutions. We specialize in web development, mobile app development,
+UI/UX design, cloud services, and custom software development.
+Our mission is to transform ideas into successful digital products.
+</p>
+</div>
+</section>
+
+<!-- Services -->
+<section id="services">
+<div class="container">
+<h2 class="section-title">Our Services</h2>
+
+<div class="services-grid">
+
+<div class="card">
+<h3>🌐 Web Development</h3>
+<p>Modern, responsive and high-performance websites.</p>
+</div>
+
+<div class="card">
+<h3>📱 Mobile Apps</h3>
+<p>Android and iOS applications with excellent user experience.</p>
+</div>
+
+<div class="card">
+<h3>💻 Custom Software</h3>
+<p>Tailor-made software solutions for businesses.</p>
+</div>
+
+<div class="card">
+<h3>☁ Cloud Solutions</h3>
+<p>Secure and scalable cloud infrastructure deployment.</p>
+</div>
+
+<div class="card">
+<h3>🎨 UI/UX Design</h3>
+<p>Creative and user-friendly interfaces.</p>
+</div>
+
+<div class="card">
+<h3>🔒 Cyber Security</h3>
+<p>Protecting your systems and digital assets.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio">
+<div class="container">
+
+<h2 class="section-title">Portfolio</h2>
+
+<div class="portfolio-grid">
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1000" alt="">
+<div class="project-content">
+<h3>E-Commerce Platform</h3>
+<p>Online shopping platform with secure payments.</p>
+</div>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1000" alt="">
+<div class="project-content">
+<h3>Healthcare System</h3>
+<p>Digital healthcare management software.</p>
+</div>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1000" alt="">
+<div class="project-content">
+<h3>Business CRM</h3>
+<p>Customer relationship management solution.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+<div class="container contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<input type="text" placeholder="Phone Number">
+<textarea placeholder="Your Message"></textarea>
+
+<button class="btn">Send Message</button>
+</form>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 Techno Hub. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
